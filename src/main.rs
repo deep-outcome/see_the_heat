@@ -26,7 +26,6 @@ const ABS_MAX_DUTY: u16 = 256;
 fn main() -> ! {
     const NEG_CEL_DEGS: f32 = 50.0;
     const POS_CEL_DEGS: f32 = 60.0;
-    const OVERLIMIT: f32 = 10.0;
 
     #[cfg(feature = "test")]
     rtt_target::rtt_init_print!();
@@ -37,6 +36,8 @@ fn main() -> ! {
     let temp = {
         use microbit::hal::Timer;
         let tim = Timer::new(p.TIMER0);
+
+        const OVERLIMIT: f32 = 10.0;
 
         TestTemp {
             val: -60.0,
@@ -172,7 +173,7 @@ impl TempReader {
     fn start_measurement(&mut self) {
         self.temp.start_measurement();
     }
-    
+
     fn read(&mut self) -> Option<f32> {
         if let Ok(val) = self.temp.read() {
             let conv = val.to_num::<f32>();
