@@ -47,7 +47,7 @@ fn main() -> ! {
             up_l: POS_CEL_DEGS,
             ste: 0.1,
             tim,
-            del: 10,
+            del: 5,
         }
     };
 
