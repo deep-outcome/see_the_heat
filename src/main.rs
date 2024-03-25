@@ -47,7 +47,7 @@ fn main() -> ! {
             up_l: POS_CEL_DEGS,
             ste: 0.1,
             tim,
-            del: 25,
+            del: 10,
         }
     };
 
@@ -141,7 +141,7 @@ fn set_max_duty_on_all(pwm0: &Pwm<PWM0>) {
 }
 
 fn set_max_duty(pwm: &Pwm<PWM0>, ch: Channel) {
-    if pwm.duty_off(ch) != ABS_MAX_DUTY {
+    if pwm.duty_on(ch) != 0 {
         pwm.set_duty_on(ch, ABS_MAX_DUTY);
     }
 }
@@ -206,12 +206,16 @@ impl TempReader {
             val = if (val * -1.0) as u8 % 2 == 0 {
                 lo_l
             } else {
-                min
+                lo_l - 1000.0 * f32::EPSILON
             }
         }
 
         if val > up_l {
-            val = if val as u8 % 2 == 0 { up_l } else { max }
+            val = if val as u8 % 2 == 0 {
+                up_l
+            } else {
+                up_l + 1000.0 * f32::EPSILON
+            }
         }
 
         rtt_target::rprintln!("val --> {}", val);
