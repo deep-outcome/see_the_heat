@@ -75,14 +75,10 @@ fn main() -> ! {
     #[cfg(feature = "run")]
     temp_reader.start_measurement();
 
-    mod norm_consts {
-        const RGB_POIS: f32 = 255.0;
-        const CEL_DEGS: f32 = 110.0;
-        pub const POI_PER_DEG: f32 = RGB_POIS / CEL_DEGS;
-        pub const DOU_POI_PER_DEG: f32 = POI_PER_DEG * 2.0;
-    }
-
-    use norm_consts::{DOU_POI_PER_DEG, POI_PER_DEG};
+    const RGB_POIS: f32 = 256.0;
+    const CEL_DEGS: f32 = 110.0;
+    pub const POI_PER_DEG: f32 = RGB_POIS / CEL_DEGS;
+    pub const DOU_POI_PER_DEG: f32 = POI_PER_DEG * 2.0;
 
     #[cfg(feature = "test")]
     assert_eq!(ABS_MAX_DUTY, pwm0.max_duty());
