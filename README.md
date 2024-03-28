@@ -6,7 +6,7 @@ RGB LED extension board driven by temperature sensor (on-core nRF52).
 
 
 ### HW operated
-- [MonkMakes RGB LED for micro:bit](https://www.monkmakes.com/mb_rgb)
+- [MonkMakes RGB LED for micro:bit v 2b](https://www.monkmakes.com/mb_rgb)
 - [micro:bit v 2.21](https://tech.microbit.org/hardware/)
 
 ### Details
