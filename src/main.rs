@@ -20,7 +20,7 @@ use microbit::hal::time::U32Ext;
 #[cfg(feature = "run")]
 use microbit::hal::Temp;
 
-const ABS_MAX_DUTY: u16 = 256;
+const MAX_DUTY: u16 = 256;
 
 #[entry]
 fn main() -> ! {
@@ -81,7 +81,7 @@ fn main() -> ! {
     pub const DOU_POI_PER_DEG: f32 = POI_PER_DEG * 2.0;
 
     #[cfg(feature = "test")]
-    assert_eq!(ABS_MAX_DUTY, pwm0.max_duty());
+    assert_eq!(MAX_DUTY, pwm0.max_duty());
 
     loop {
         let be_val = temp_reader.read();
@@ -95,7 +95,7 @@ fn main() -> ! {
             let blue_amount = if val < 5.0 {
                 (val + NEG_CEL_DEGS) * DOU_POI_PER_DEG
             } else {
-                ABS_MAX_DUTY as f32
+                MAX_DUTY as f32
             };
             let green_amount = {
                 let magic_corrector = 0.6 - if val > 30.0 { (val - 30.0) * 0.02 } else { 0.0 };
@@ -138,7 +138,7 @@ fn set_max_duty_on_all(pwm0: &Pwm<PWM0>) {
 
 fn set_max_duty(pwm: &Pwm<PWM0>, ch: Channel) {
     if pwm.duty_on(ch) != 0 {
-        pwm.set_duty_on(ch, ABS_MAX_DUTY);
+        pwm.set_duty_on(ch, MAX_DUTY);
     }
 }
 
