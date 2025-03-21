@@ -33,14 +33,14 @@ RGB LED extension board driven by temperature sensor (on-core nRF52).
   </thead>
   <tbody>
     <tr>
-      <td><img src="https://github.com/bravequickcleverfibreyarn/see_the_heat/blob/main/pre/full-scale.gif" alt="full scale" height="300" /></td> 
-      <td><img src="https://github.com/bravequickcleverfibreyarn/see_the_heat/blob/main/pre/-50-deg.jpg" alt="-50 degress" height="300" /></td> 
-      <td><img src="https://github.com/bravequickcleverfibreyarn/see_the_heat/blob/main/pre/0-deg.jpg" alt="0 degress" height="300" /></td>
-      <td><img src="https://github.com/bravequickcleverfibreyarn/see_the_heat/blob/main/pre/15-deg.jpg" alt="15 degress" height="300" /></td>
-      <td><img src="https://github.com/bravequickcleverfibreyarn/see_the_heat/blob/main/pre/25-deg.jpg" alt="25 degress" height="300" /></td>
-      <td><img src="https://github.com/bravequickcleverfibreyarn/see_the_heat/blob/main/pre/30-deg.jpg" alt="30 degress" height="300" /></td>
-      <td><img src="https://github.com/bravequickcleverfibreyarn/see_the_heat/blob/main/pre/40-deg.jpg" alt="40 degress" height="300" /></td>
-      <td><img src="https://github.com/bravequickcleverfibreyarn/see_the_heat/blob/main/pre/50-deg.jpg" alt="50 degress" height="300" /></td>
+      <td><img src="https://github.com/deep-outcome/see_the_heat/blob/main/pre/full-scale.gif" alt="full scale" height="300" /></td> 
+      <td><img src="https://github.com/deep-outcome/see_the_heat/blob/main/pre/-50-deg.jpg" alt="-50 degress" height="300" /></td> 
+      <td><img src="https://github.com/deep-outcome/see_the_heat/blob/main/pre/0-deg.jpg" alt="0 degress" height="300" /></td>
+      <td><img src="https://github.com/deep-outcome/see_the_heat/blob/main/pre/15-deg.jpg" alt="15 degress" height="300" /></td>
+      <td><img src="https://github.com/deep-outcome/see_the_heat/blob/main/pre/25-deg.jpg" alt="25 degress" height="300" /></td>
+      <td><img src="https://github.com/deep-outcome/see_the_heat/blob/main/pre/30-deg.jpg" alt="30 degress" height="300" /></td>
+      <td><img src="https://github.com/deep-outcome/see_the_heat/blob/main/pre/40-deg.jpg" alt="40 degress" height="300" /></td>
+      <td><img src="https://github.com/deep-outcome/see_the_heat/blob/main/pre/50-deg.jpg" alt="50 degress" height="300" /></td>
     </tr>
   </tbody>
 </table>
